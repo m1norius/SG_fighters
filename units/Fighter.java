@@ -49,9 +49,9 @@ public class Fighter implements Unit {
     private boolean isCritical(){
         int chance;
         Random r = new Random();
-        chance = r.nextInt(101);
+        chance = r.nextInt(100);
         if(chance < criticalChance){
-            System.out.println("Critical chance: ---"+criticalChance+"%--- roll on crit ---"+chance+"--- !!!X2!!!");
+            System.out.println("Critical chance: ---"+criticalChance+"%--- roll on crit ---"+chance+"--- \033[31m!!!X2!!!\033[0m");
             return true;
         }
         System.out.println("Critical chance: ---"+criticalChance+"%--- roll on crit ---"+chance+"---");
@@ -61,9 +61,9 @@ public class Fighter implements Unit {
         int realKick = strength;
         if (realKick > 0){
             if (isCritical()){
-                System.out.print("Real dmg: " + realKick);
+                System.out.print("Real dmg:" + realKick);
                 realKick = realKick*2;
-                System.out.println(" * 2 = "+realKick );
+                System.out.println(" * 2 = \033[31m"+realKick + "\033[0m");
             }
         }else {
             System.out.println("Miss");
@@ -75,9 +75,9 @@ public class Fighter implements Unit {
         System.out.println("----Dodge----");
         int chance;
         Random r = new Random();
-        chance = r.nextInt(101);
+        chance = r.nextInt(100);
         if(chance < agility){
-            System.out.println("Dodge chance: ---"+agility+"%--- roll on dodge ---"+chance+"--- !!!dodge!!!");
+            System.out.println("Dodge chance: ---"+agility+"%--- roll on dodge ---"+chance+"--- \033[34m!!!dodge!!!\033[0m");
             return true;
         }
         System.out.println("Dodge chance: ---"+agility+"%--- roll on dodge ---"+chance+"---");

@@ -15,6 +15,7 @@ public class Arena {
     public static void combat(){
         while (fightersOnArena.size() != 1){
 
+
             while (fightersOnArena.get(fightersOnArena.size()-1).getHP() >= 0  && fightersOnArena.get(0).getHP() >= 0){
                 fightersOnArena.get(0).getName();
                 int attackFirstFighter = fightersOnArena.get(0).attack();
@@ -56,7 +57,9 @@ public class Arena {
 
         }
 
-        System.out.println("Winner");
+        System.out.print("\033[1;33m Winner ");
         fightersOnArena.get(0).getName();
+        System.out.print("\033[0m ");
+
     }
 }
