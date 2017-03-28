@@ -1,5 +1,6 @@
 package units;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,7 +8,9 @@ import java.util.Random;
 /**
  * Created by minorius on 02.03.2017.
  */
-public class Names {
+public class Names implements Serializable{
+
+    public static long serialVersionUID = 5008632469733847506L;
 
     private static List<String> fightersNames = new ArrayList<>();
 

@@ -2,8 +2,6 @@ import factory.FightersFactory;
 import factory.UnitFactory;
 import units.Unit;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -15,14 +13,16 @@ public class Main {
             unit.pumpUnit();
             unit.setName();
             unit.getName();
-            Arena.addFightersToArena(unit);
+            //Arena.addFightersToArena(unit);
+            Communicator.addFighter(unit);
         }
         System.out.println("----------------");
         System.out.println("----------------");
         System.out.println("----------------");
         System.out.println("----------------");
 
-        Arena.combat();
+        //Arena.combat();
+        Communicator.dataTransfer();
 
 
     }
